@@ -46,9 +46,12 @@ public class EchoServer extends AbstractServer {
      */
     public void handleMessageFromClient
     (Object msg, ConnectionToClient client) {
-        System.out.println("Message received: " + msg + " from " + client);
         PacketFactory pf = new PacketFactory();
-        Packet p = pf.creatPacket((String) msg);
+        Packet p = pf.creatPacket((byte[]) msg);
+        
+        System.out.println("Message received: " + p.onReceive() + " from " + client);
+        
+        p = pf.creatPacket(p.onReceive());
         this.sendToAllClients(p);
     }
 

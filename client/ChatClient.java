@@ -66,9 +66,9 @@ public class ChatClient extends AbstractClient {
      *
      * @param message The message from the UI.
      */
-    public void handleMessageFromClientUI(String message) {
+    public void handleMessageFromClientUI(Packet p) {
         try {
-            sendToServer(message);
+            sendToServer(p.onSend());
         } catch (IOException e) {
             clientUI.display
                     ("Could not send message to server.  Terminating client.");

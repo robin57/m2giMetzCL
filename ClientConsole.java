@@ -6,6 +6,8 @@ import java.io.*;
 
 import client.*;
 import common.*;
+import crypto.Packet;
+import crypto.PacketFactory;
 
 /**
  * This class constructs the UI for a chat client.  It implements the
@@ -66,7 +68,9 @@ public class ClientConsole implements ChatIF {
 
             while (true) {
                 message = fromConsole.readLine();
-                client.handleMessageFromClientUI(message);
+                PacketFactory pf = new PacketFactory();
+                Packet p = pf.creatPacket(message);
+                client.handleMessageFromClientUI(p);
             }
         } catch (Exception ex) {
             System.out.println
