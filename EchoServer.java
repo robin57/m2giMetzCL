@@ -2,6 +2,8 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com 
 
+import crypto.Packet;
+import crypto.PacketFactory;
 import ocsf.server.*;
 
 /**
@@ -45,7 +47,9 @@ public class EchoServer extends AbstractServer {
     public void handleMessageFromClient
     (Object msg, ConnectionToClient client) {
         System.out.println("Message received: " + msg + " from " + client);
-        this.sendToAllClients(msg);
+        PacketFactory pf = new PacketFactory();
+        Packet p = pf.creatPacket((String) msg);
+        this.sendToAllClients(p);
     }
 
     /**

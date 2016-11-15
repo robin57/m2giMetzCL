@@ -4,6 +4,8 @@
 
 package ocsf.server;
 
+import crypto.Packet;
+import crypto.PacketFactory;
 import java.net.*;
 import java.io.*;
 
@@ -175,12 +177,12 @@ public abstract class AbstractServer implements Runnable {
      *
      * @param msg Object The message to be sent
      */
-    public void sendToAllClients(Object msg) {
+    public void sendToAllClients(Packet p) {
         Thread[] clientThreadList = getClientConnections();
 
         for (Thread aClientThreadList : clientThreadList) {
             try {
-                ((ConnectionToClient) aClientThreadList).sendToClient(msg);
+                ((ConnectionToClient) aClientThreadList).sendToClient(p);
             } catch (Exception ex) {
             }
         }

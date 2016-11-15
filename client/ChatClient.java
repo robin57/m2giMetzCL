@@ -6,6 +6,8 @@ package client;
 
 import ocsf.client.*;
 import common.*;
+import crypto.Packet;
+import crypto.PacketFactory;
 
 import java.io.*;
 
@@ -54,7 +56,9 @@ public class ChatClient extends AbstractClient {
      * @param msg The message from the server.
      */
     public void handleMessageFromServer(Object msg) {
-        clientUI.display(msg.toString());
+        PacketFactory pf = new PacketFactory();
+        Packet p = pf.creatPacket((byte[]) msg);
+        clientUI.display(p.onReceive());
     }
 
     /**
