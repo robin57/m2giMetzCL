@@ -6,27 +6,22 @@
 package crypto;
 
 /**
- *
  * @author PME
  */
 public class PacketFactory {
 
     private Type type;
-    
-    public enum Type{
-        AES,
-    }
+
 
     public PacketFactory() {
 
         this.setTypeAES();
-        
     }
+
 
     public void setTypeAES() {
 
         this.type = Type.AES;
-
     }
 
     public Packet creatPacket(String id) {

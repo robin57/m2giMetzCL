@@ -43,7 +43,7 @@ public class PacketAES extends Packet {
 
         try {
 
-            SecretKey cle = new SecretKeySpec(key.getBytes(), "AES");
+            SecretKey cle = new SecretKeySpec(key.getBytes(), Type.AES.toString());
             byte[] enc = encrypter(this.getMsg(), cle);
             this.setMsgEnc(enc);
             return this.getMsgEnc();
@@ -58,7 +58,7 @@ public class PacketAES extends Packet {
 
         try {
 
-            SecretKey cle = new SecretKeySpec(key.getBytes(), "AES");
+            SecretKey cle = new SecretKeySpec(key.getBytes(), Type.AES.toString());
             String dec = decrypter(this.getMsgEnc(), cle);
             return dec;
 
@@ -73,7 +73,7 @@ public class PacketAES extends Packet {
             throws NoSuchAlgorithmException, NoSuchPaddingException,
             InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
 
-        Cipher cipher = Cipher.getInstance("AES");
+        Cipher cipher = Cipher.getInstance(Type.AES.toString());
         cipher.init(Cipher.ENCRYPT_MODE, cle);
         byte[] donnees = message.getBytes();
         return cipher.doFinal(donnees);
@@ -84,7 +84,7 @@ public class PacketAES extends Packet {
             throws NoSuchAlgorithmException, NoSuchPaddingException,
             InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
 
-        Cipher cipher = Cipher.getInstance("AES");
+        Cipher cipher = Cipher.getInstance(Type.AES.toString());
         cipher.init(Cipher.DECRYPT_MODE, cle);
 
         return new String(cipher.doFinal(donnees));

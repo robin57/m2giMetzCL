@@ -22,6 +22,7 @@ public abstract class Packet {
     private StringBuilder msg;
     private byte[] msgEnc;
 
+
     public Packet() {
 
     }

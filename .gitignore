@@ -70,3 +70,5 @@ local.properties
 .buildpath
 
 .directory
+*.iml
+.idea

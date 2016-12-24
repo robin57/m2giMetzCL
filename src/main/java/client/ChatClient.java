@@ -27,7 +27,7 @@ public class ChatClient extends AbstractClient {
      * The interface type variable.  It allows the implementation of
      * the display method in the client.
      */
-    ChatIF clientUI;
+    private ChatIF clientUI;
 
 
     //Constructors ****************************************************
@@ -64,7 +64,7 @@ public class ChatClient extends AbstractClient {
     /**
      * This method handles all data coming from the UI
      *
-     * @param message The message from the UI.
+     * @param p The packet from the UI.
      */
     public void handleMessageFromClientUI(Packet p) {
         try {
