@@ -6,9 +6,9 @@ import info.gehrels.voting.Candidate;
  * Created by schuma on 24/12/16.
  *
  */
-public class Personne extends Candidate {
+public class Candidat extends Candidate {
 
-    public Personne(String name) {
+    public Candidat(String name) {
         super(name);
     }
 
