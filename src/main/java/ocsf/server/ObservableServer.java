@@ -4,6 +4,7 @@
 
 package ocsf.server;
 
+import crypto.Packet;
 import java.util.*;
 import java.io.*;
 import java.net.*;
@@ -108,7 +109,7 @@ public class ObservableServer extends Observable {
      *
      * @param msg The message to be sent
      */
-    public void sendToAllClients(Object msg) {
+    public void sendToAllClients(Packet msg) {
         service.sendToAllClients(msg);
     }
 

@@ -6,6 +6,8 @@ package client;
 
 import ocsf.client.*;
 import common.*;
+import crypto.Packet;
+import crypto.PacketFactory;
 
 import java.io.*;
 
@@ -25,7 +27,7 @@ public class ChatClient extends AbstractClient {
      * The interface type variable.  It allows the implementation of
      * the display method in the client.
      */
-    ChatIF clientUI;
+    private ChatIF clientUI;
 
 
     //Constructors ****************************************************
@@ -54,17 +56,19 @@ public class ChatClient extends AbstractClient {
      * @param msg The message from the server.
      */
     public void handleMessageFromServer(Object msg) {
-        clientUI.display(msg.toString());
+        PacketFactory pf = new PacketFactory();
+        Packet p = pf.creatPacket((byte[]) msg);
+        clientUI.display(p.onReceive());
     }
 
     /**
      * This method handles all data coming from the UI
      *
-     * @param message The message from the UI.
+     * @param p The packet from the UI.
      */
-    public void handleMessageFromClientUI(String message) {
+    public void handleMessageFromClientUI(Packet p) {
         try {
-            sendToServer(message);
+            sendToServer(p.onSend());
         } catch (IOException e) {
             clientUI.display
                     ("Could not send message to server.  Terminating client.");
