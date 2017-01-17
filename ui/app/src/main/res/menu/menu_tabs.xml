@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Message" />
+        <item
+            android:id="@+id/nav_drawpad"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="DrawPad" />
+        <item
+            android:id="@+id/nav_buddy_list"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="BuddyList" />
+        <item
+            android:id="@+id/nav_vote"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Vote" />
+        <item android:title="Mon compte">
+            <menu>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Paramètres" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Deconnexion" />
+            </menu>
+        </item>
+    </group>
+
+</menu>
