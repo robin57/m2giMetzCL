@@ -10,7 +10,6 @@ import android.content.Intent;
 public class Connection extends AppCompatActivity {
 
     Button connection = null;
-    TextView test = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
