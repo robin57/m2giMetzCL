@@ -20,5 +20,7 @@ public class MessageFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.message_layout,container,false);
         return myView;
+
+
     }
 }
