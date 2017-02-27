@@ -1,6 +1,7 @@
-package vote;
+package voting.election;
 
 import com.google.common.collect.ImmutableSet;
+import voting.VoteChoice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by florian on 24/12/16.
  *
  */
-public class TestVote {
+public class TestElection {
 
 
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class TestVote {
         Candidat p4 = new Candidat("Frodon");
         Candidat p5 = new Candidat("Gimli");
 
-        List<Candidat> candidats = new ArrayList<>();
+        List<VoteChoice> candidats = new ArrayList<>();
         candidats.add(p1);
         candidats.add(p2);
         candidats.add(p3);
@@ -37,28 +38,28 @@ public class TestVote {
         System.out.println(election.getCandidates());
 
 
-        List<Candidat> votes = new ArrayList<>();
+        List<VoteChoice> votes = new ArrayList<>();
 
-        //premier vote
+        //premier voting.election
         votes.add(p1); //florian
         votes.add(p4); //frodon
         election.voter(votes);
 
 
-        //deuxième vote
+        //deuxième voting.election
         //votes = new ArrayList<>();
         //votes.add(p1); //florian
         //votes.add(p4); //frodon
         //election.voter(votes);
 
-        //troisième vote
+        //troisième voting.election
         votes = new ArrayList<>();
         votes.add(p5); //florian
         votes.add(p4); //frodon
         votes.add(p1); //gimli
         election.voter(votes);
 
-        //quatrième vote, un vote blanc
+        //quatrième voting.election, un voting.election blanc
         //election.voterBlanc();
 
         election.fermerElection();
@@ -66,7 +67,7 @@ public class TestVote {
 
         // Résultats
         //TODO ne fonctionne pas tres bien quand il y a des egalites
-        ImmutableSet<Candidat> elus = election.getResultats();
+        ImmutableSet<VoteChoice> elus = election.getResultats();
 
         System.out.println();
         System.out.println("Voici les élus");

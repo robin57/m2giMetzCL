@@ -1,4 +1,4 @@
-package vote;
+package voting;
 
 import com.google.common.collect.ImmutableSet;
 import info.gehrels.voting.Election;
@@ -10,15 +10,15 @@ import java.util.List;
  * Created by schuma on 29/12/16.
  *
  */
-public class VoteManager {
+public class VotingManager {
     private int bulletinId = 1;
     private final Election election;
 
-    public VoteManager(Election<Candidat> election) {
+    public VotingManager(Election<VoteChoice> election) {
         this.election = election;
     }
 
-    public Bulletin voter(List<Candidat> liste){
+    public Bulletin voter(List<VoteChoice> liste){
         return new Bulletin(Vote.createPreferenceVote(election, ImmutableSet.copyOf(liste)), bulletinId++);
     }
 

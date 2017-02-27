@@ -1,8 +1,9 @@
-package vote;
+package voting;
 
 import com.google.common.collect.ImmutableSet;
 import info.gehrels.voting.Ballot;
 import info.gehrels.voting.Vote;
+import voting.VoteChoice;
 
 
 /**
@@ -10,13 +11,13 @@ import info.gehrels.voting.Vote;
  *
  */
 public class Bulletin {
-    private Ballot<Candidat> ballot;
+    private Ballot<VoteChoice> ballot;
 
-    public Bulletin(Vote<Candidat> vote, int numBulletin) {
+    public Bulletin(Vote<VoteChoice> vote, int numBulletin) {
         this.ballot = new Ballot<>(numBulletin, ImmutableSet.of(vote));
     }
 
-    public Ballot<Candidat> getBallot() {
+    public Ballot<VoteChoice> getBallot() {
         return ballot;
     }
 }

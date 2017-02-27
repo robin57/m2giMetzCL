@@ -28,7 +28,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- simple transferable vote elections -->
+        <!-- simple transferable voting.electiontion elections -->
         <dependency>
             <groupId>info.gehrels.voting</groupId>
             <artifactId>singleTransferableVoteElections</artifactId>

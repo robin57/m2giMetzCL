@@ -1,12 +1,12 @@
-package vote;
+package voting.election;
 
-import info.gehrels.voting.Candidate;
+import voting.VoteChoice;
 
 /**
  * Created by schuma on 24/12/16.
  *
  */
-public class Candidat extends Candidate {
+public class Candidat extends VoteChoice {
 
     public Candidat(String name) {
         super(name);
