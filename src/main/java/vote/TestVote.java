@@ -41,25 +41,25 @@ public class TestVote {
 
         //premier vote
         votes.add(p1); //florian
-        votes.add(p4); //bilbon
+        votes.add(p4); //frodon
         election.voter(votes);
 
 
         //deuxième vote
-        votes = new ArrayList<>();
-        votes.add(p1); //florian
-        votes.add(p4); //frodon
-        election.voter(votes);
+        //votes = new ArrayList<>();
+        //votes.add(p1); //florian
+        //votes.add(p4); //frodon
+        //election.voter(votes);
 
         //troisième vote
         votes = new ArrayList<>();
-        votes.add(p1); //florian
+        votes.add(p5); //florian
         votes.add(p4); //frodon
-        votes.add(p5); //gimli
+        votes.add(p1); //gimli
         election.voter(votes);
 
         //quatrième vote, un vote blanc
-        election.voterBlanc();
+        //election.voterBlanc();
 
         election.fermerElection();
 
