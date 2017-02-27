@@ -3,7 +3,8 @@
 // license found at www.lloseng.com 
 
 import ocsf.server.*;
-
+import command.MessageHandlerManager;
+import command.TestHandler;
 /**
  * This class overrides some of the methods in the abstract
  * superclass in order to give more functionality to the server.
@@ -21,7 +22,7 @@ public class EchoServer extends AbstractServer {
      * The default port to listen on.
      */
     final public static int DEFAULT_PORT = 5555;
-
+    MessageHandlerManager handlerManager;
     //Constructors ****************************************************
 
     /**
@@ -31,6 +32,8 @@ public class EchoServer extends AbstractServer {
      */
     public EchoServer(int port) {
         super(port);
+        this.handlerManager = new MessageHandlerManager();
+        this.handlerManager.registerHandler(new TestHandler());
     }
 
 
@@ -44,6 +47,7 @@ public class EchoServer extends AbstractServer {
      */
     public void handleMessageFromClient
     (Object msg, ConnectionToClient client) {
+  	  	this.handlerManager.handle(msg.toString(), client);
         System.out.println("Message received: " + msg + " from " + client);
         this.sendToAllClients(msg);
     }

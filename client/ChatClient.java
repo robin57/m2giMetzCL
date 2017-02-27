@@ -2,13 +2,13 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com 
 
-package com.mp.SimpleChat.client;
+package client;
 
-import com.mp.SimpleChat.ocsf.client.*;
-import com.mp.SimpleChat.COR.CORSingleton;
-import com.mp.SimpleChat.common.*;
+import java.io.IOException;
 
-import java.io.*;
+import ocsf.client.ObservableClient;
+
+import common.ChatIF;
 
 /**
  * This class overrides some of the methods defined in the abstract
@@ -78,11 +78,13 @@ public class ChatClient extends ObservableClient
 	 */
 	public void handleMessageFromClientUI(String message)
 	{
+		//@TODO : DECOMMENTER CES LIGNES
+		//en attente du commit des fichiers correspondants
 		if (message.charAt(0) == '#'){
 			try {
-				CORSingleton.getInstance().invoke(message.substring(1)).execute(this);
+				//CORSingleton.getInstance().invoke(message.substring(1)).execute(this);
 			} catch (Exception e) {
-				clientUI.displayErr("Error : " + e.getMessage());
+				//clientUI.displayErr("Error : " + e.getMessage());
 			}
 		}else{
 		    try{
