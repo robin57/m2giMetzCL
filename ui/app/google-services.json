@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "533675888671",
+    "firebase_url": "https://chatapp-50062.firebaseio.com",
+    "project_id": "chatapp-50062",
+    "storage_bucket": "chatapp-50062.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533675888671:android:30f63e6067bd5c0d",
+        "android_client_info": {
+          "package_name": "com.example.ameli.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533675888671-77gsbnrten3m8uvjbcjlstdvba23u6kg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ameli.chat",
+            "certificate_hash": "633ad219a81c5f1f1bcb860f9dfb1e2f45a812a0"
+          }
+        },
+        {
+          "client_id": "533675888671-v1vnlnv8vk8eudtnbfl7il7f3cvplqdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoVJ1A9wAyTf0OLdhddqqJQRKR931krLg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533675888671-v1vnlnv8vk8eudtnbfl7il7f3cvplqdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

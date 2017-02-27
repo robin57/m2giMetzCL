@@ -7,7 +7,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
 
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Connection extends AppCompatActivity {
+
+    public static int SIGN_IN_REQUEST_CODE = 1 ;
+    private FirebaseListAdapter<ChatMessage> adapter ;
 
     Button connection = null;
 
@@ -15,6 +21,7 @@ public class Connection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.connection_layout);
+
 
         // On récupère toutes les vues dont on a besoin
         connection = (Button) findViewById(R.id.connection);

@@ -18,7 +18,7 @@ public class VoteFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.message_layout,container,false);
+        myView = inflater.inflate(R.layout.vote_layout,container,false);
         return myView;
     }
 }

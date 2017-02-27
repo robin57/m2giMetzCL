@@ -70,7 +70,6 @@ public class NavigationDrawerManager extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         android.app.FragmentManager fragmentManager = getFragmentManager();
-
         if (id == R.id.nav_messages) {
             //open message
             fragmentManager.beginTransaction().replace(R.id.content_frame,new MessageFragment()).commit();
@@ -83,11 +82,10 @@ public class NavigationDrawerManager extends AppCompatActivity
             // open the BuddyList
             fragmentManager.beginTransaction().replace(R.id.content_frame, new BuddyListFragment()).commit();
             setTitle("BuddyList");
-        }
-        else if (id == R.id.nav_vote) {
-                // open the BuddyList
-                fragmentManager.beginTransaction().replace(R.id.content_frame,new VoteFragment()).commit();
-                setTitle("Vote");
+        } else if (id == R.id.nav_vote) {
+            // open the Vote
+            fragmentManager.beginTransaction().replace(R.id.content_frame,new VoteFragment()).commit();
+            setTitle("Vote");
         }  else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_logout) {
