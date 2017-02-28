@@ -49,7 +49,7 @@ public class ChatClient extends ObservableClient
 	{
 		super(host, port); //Call the superclass constructor
 		this.clientUI = clientUI;
-		//openConnection();
+		openConnection();
 	}
 	
 	/**
