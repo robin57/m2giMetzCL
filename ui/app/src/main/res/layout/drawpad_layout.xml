@@ -66,62 +66,62 @@
             android:orientation="horizontal" >
 
             <ImageButton
+                android:id ="@+id/brown"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF660000"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF660000" />
 
             <ImageButton
+                android:id ="@+id/red"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FFFF0000"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FFFF0000" />
 
             <ImageButton
+                android:id ="@+id/orange"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FFFF6600"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FFFF6600" />
 
             <ImageButton
+                android:id ="@+id/yellow"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FFFFCC00"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FFFFCC00" />
 
             <ImageButton
+                android:id ="@+id/green"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF009900"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF009900" />
 
             <ImageButton
+                android:id ="@+id/blue"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF009999"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF009999" />
 
@@ -133,66 +133,66 @@
             android:orientation="horizontal" >
 
             <ImageButton
+                android:id="@+id/navyblue"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF0000FF"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF0000FF" />
 
             <ImageButton
+                android:id="@+id/fushia"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF990099"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF990099" />
 
             <ImageButton
+                android:id="@+id/pink"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FFFF6666"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FFFF6666" />
 
             <ImageButton
+                android:id="@+id/white"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FFFFFFFF"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FFFFFFFF" />
 
             <ImageButton
+                android:id="@+id/grey"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF787878"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF787878" />
 
             <ImageButton
+                android:id="@+id/black"
                 android:layout_width="@dimen/large_brush"
                 android:layout_height="@dimen/large_brush"
                 android:layout_margin="2dp"
                 android:background="#FF000000"
                 android:contentDescription="@string/paint"
-                android:onClick="paintClicked"
                 android:src="@drawable/paint"
                 android:tag="#FF000000" />
 
         </LinearLayout>
     </LinearLayout>
 
-    </LinearLayout>
+</LinearLayout>
