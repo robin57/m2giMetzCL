@@ -6,6 +6,10 @@ package client;
 
 import java.io.IOException;
 
+
+import crypto.Packet;
+import crypto.PacketFactory;
+
 import ocsf.client.ObservableClient;
 
 import common.ChatIF;
@@ -68,13 +72,15 @@ public class ChatClient extends ObservableClient
 	 */
 	public void handleMessageFromServer(Object msg) 
 	{
-		clientUI.display(msg.toString());
+		PacketFactory pf = new PacketFactory();
+		Packet p = pf.creatPacket((byte[]) msg);
+		clientUI.display(p.onReceive());
 	}
 
 	/**
 	 * This method handles all data coming from the UI            
 	 *
-	 * @param message The message from the UI.    
+	 * @param message The message from the UI.
 	 */
 	public void handleMessageFromClientUI(String message)
 	{
@@ -96,6 +102,21 @@ public class ChatClient extends ObservableClient
 		    }
 		}
 	}
+
+    /**
+     * This method handles all data coming from the UI
+     *
+     * @param p The packet from the UI.
+     */
+    public void handleMessageFromClientUI(Packet p) {
+        try {
+            sendToServer(p.onSend());
+        } catch (IOException e) {
+            clientUI.display
+                    ("Could not send message to server.  Terminating client.");
+            quit();
+        }
+    }
 
 	/**
 	 * This method terminates the client.
@@ -152,7 +173,6 @@ public class ChatClient extends ObservableClient
 		quit();
 
 	}
-
 
 }
 //End of ChatClient class
