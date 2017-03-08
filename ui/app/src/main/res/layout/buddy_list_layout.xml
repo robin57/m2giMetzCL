@@ -2,13 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:text="Buddy List"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="101dp"
-        android:background="@color/grey"
-        android:id="@+id/textView4" />
+    <LinearLayout
+        android:id="@+id/list"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" >
+
+        <ListView
+            android:id= "@+id/list_of_friend"
+            android:dividerHeight="16dp"
+            android:divider="@android:color/transparent"
+            android:layout_marginBottom="16dp"
+
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"/>
+
+        <ListView
+            android:id="@+id/list_of_unfriend"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="16dp" />
+    </LinearLayout>
 </RelativeLayout>

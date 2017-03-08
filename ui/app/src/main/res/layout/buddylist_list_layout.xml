@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/friend_ennemy_thumbnail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/user"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom de l'user"
+        android:id="@+id/friend_ennemy_text"
+        android:layout_alignBaseline="@+id/friend_ennemy_thumbnail"
+        android:layout_alignBottom="@+id/friend_ennemy_thumbnail"
+        android:layout_toRightOf="@+id/friend_ennemy_thumbnail"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -5,29 +5,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_messages"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/messages"
             android:title="Message" />
         <item
             android:id="@+id/nav_drawpad"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/drawpad"
             android:title="DrawPad" />
         <item
             android:id="@+id/nav_buddy_list"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/buddylist"
             android:title="BuddyList" />
         <item
             android:id="@+id/nav_vote"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/vote"
             android:title="Vote" />
         <item android:title="Mon compte">
             <menu>
                 <item
                     android:id="@+id/nav_settings"
-                    android:icon="@drawable/ic_menu_share"
+                    android:icon="@drawable/parametre"
                     android:title="Paramètres" />
                 <item
                     android:id="@+id/nav_logout"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/deconnection"
                     android:title="Deconnexion" />
             </menu>
         </item>

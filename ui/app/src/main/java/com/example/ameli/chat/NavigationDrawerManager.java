@@ -18,7 +18,7 @@ public class NavigationDrawerManager extends AppCompatActivity
         setContentView(R.layout.menu_layout);
 
         android.app.FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame,new MessageFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_frame,new ConversationFragment()).commit();
         setTitle("Messages");
 
 
@@ -72,7 +72,7 @@ public class NavigationDrawerManager extends AppCompatActivity
         android.app.FragmentManager fragmentManager = getFragmentManager();
         if (id == R.id.nav_messages) {
             //open message
-            fragmentManager.beginTransaction().replace(R.id.content_frame,new MessageFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame,new ConversationFragment()).commit();
             setTitle("Messages");
         } else if (id == R.id.nav_drawpad) {
             // open the drawPad
