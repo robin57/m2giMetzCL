@@ -54,8 +54,8 @@ public class ObservableClient extends Observable {
     /**
      * Opens the connections with the server.
      */
-    final public void openConnection() throws IOException {
-        service.openConnection();
+    final public void openConnection(String pseudo) throws IOException {
+        service.openConnection(pseudo);
     }
 
     /**

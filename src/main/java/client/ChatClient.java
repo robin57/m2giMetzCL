@@ -44,12 +44,12 @@ public class ChatClient extends ObservableClient
 	 * @param clientUI The interface type variable.
 	 */
 
-	public ChatClient(String host, int port, ChatIF clientUI) 
+	public ChatClient(String host, int port, ChatIF clientUI, String pseudo) 
 			throws IOException 
 	{
 		super(host, port); //Call the superclass constructor
 		this.clientUI = clientUI;
-		openConnection();
+		openConnection(pseudo);
 	}
 	
 	/**
