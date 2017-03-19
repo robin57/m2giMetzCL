@@ -4,8 +4,12 @@
 
 package client;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 import crypto.Packet;
 import crypto.PacketFactory;
@@ -172,6 +176,17 @@ public class ChatClient extends ObservableClient
 		//arret du client
 		quit();
 
+	}
+	
+	protected void TransfertObjet(String chemin) throws IOException{
+		Socket sock = new Socket(InetAddress.getLocalHost(),getPort());
+	    
+	    transfert(
+                new FileInputStream(chemin),
+                sock.getOutputStream(),
+                true);
+	    
+	    sock.close(); 
 	}
 
 }

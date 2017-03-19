@@ -5,6 +5,12 @@
 import crypto.Packet;
 import crypto.PacketFactory;
 import ocsf.server.*;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 import command.MessageHandlerManager;
 import command.TestHandler;
 /**
@@ -77,6 +83,22 @@ public class EchoServer extends AbstractServer {
         System.out.println
                 ("Server has stopped listening for connections.");
     }
+    
+    /**
+     * 
+     * @param chemin
+     * @throws IOException
+     */
+	protected void RecupereObjet(String chemin) throws IOException{
+	    Socket sock = new ServerSocket(getPort()).accept();
+	    
+	    transfert(
+	            sock.getInputStream(),
+	            new FileOutputStream(chemin),
+	            true);
+	    
+	    sock.close(); 
+	}
 
     //Class methods ***************************************************
 
