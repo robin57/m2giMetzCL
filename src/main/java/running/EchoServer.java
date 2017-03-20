@@ -6,6 +6,7 @@ package running;// This file contains material supporting section 3.7 of the tex
 import crypto.Packet;
 import crypto.PacketFactory;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -93,10 +94,10 @@ public class EchoServer extends AbstractServer {
 	protected void RecupereObjet(String chemin) throws IOException{
 	    Socket sock = new ServerSocket(getPort()).accept();
 	    
-	    /*transfert(
+	    transfert(
 	            sock.getInputStream(),
 	            new FileOutputStream(chemin),
-	            true);*/
+	            true);
 	    
 	    sock.close(); 
 	}
