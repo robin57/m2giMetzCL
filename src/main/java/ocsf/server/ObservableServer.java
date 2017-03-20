@@ -5,9 +5,9 @@
 package ocsf.server;
 
 import crypto.Packet;
-import java.util.*;
-import java.io.*;
-import java.net.*;
+
+import java.io.IOException;
+import java.util.Observable;
 
 /**
  * This class acts as a subclass of <code>AbstractServer</code>

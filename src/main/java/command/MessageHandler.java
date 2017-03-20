@@ -1,8 +1,8 @@
 package command;
 
-import java.util.Vector;
-
 import ocsf.server.ConnectionToClient;
+
+import java.util.Vector;
 
 public abstract class MessageHandler {
 

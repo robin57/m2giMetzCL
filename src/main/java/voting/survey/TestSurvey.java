@@ -13,7 +13,7 @@ import java.util.List;
 public class TestSurvey {
 
     public static void main(String[] args) {
-        SurveyManager sondage ;
+        SurveyManager sondage;
 
         String sujet = "Où pensez-vous partir en vacances ?";
 

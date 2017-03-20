@@ -1,8 +1,8 @@
 package command;
 
-import java.util.Arrays;
-
 import ocsf.server.ConnectionToClient;
+
+import java.util.Arrays;
 
 public class TestHandler extends MessageHandler {
 	

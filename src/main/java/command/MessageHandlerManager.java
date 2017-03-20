@@ -1,11 +1,11 @@
 package command;
 
+import ocsf.server.ConnectionToClient;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import ocsf.server.ConnectionToClient;
 
 public class MessageHandlerManager {
 	private Map<String, MessageHandler> handlers;

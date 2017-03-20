@@ -32,7 +32,7 @@ public class TestElection {
         candidats.add(p5);
 
 
-        election = new ElectionManager("Présidence", candidats, 2);
+        election = new ElectionManager("Présidence", candidats, 1);
 
         System.out.println("Voici les candidats :");
         System.out.println(election.getCandidates());
@@ -42,21 +42,21 @@ public class TestElection {
 
         //premier voting.election
         votes.add(p1); //florian
-        votes.add(p4); //frodon
+        //votes.add(p4); //frodon
         election.voter(votes);
 
 
         //deuxième voting.election
-        //votes = new ArrayList<>();
+        votes = new ArrayList<>();
         //votes.add(p1); //florian
-        //votes.add(p4); //frodon
-        //election.voter(votes);
+        votes.add(p4); //frodon
+        election.voter(votes);
 
         //troisième voting.election
         votes = new ArrayList<>();
-        votes.add(p5); //florian
-        votes.add(p4); //frodon
-        votes.add(p1); //gimli
+        //votes.add(p1); //florian
+        //votes.add(p4); //frodon
+        votes.add(p5); //gimli
         election.voter(votes);
 
         //quatrième voting.election, un voting.election blanc
