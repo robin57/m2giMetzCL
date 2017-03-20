@@ -92,10 +92,10 @@ public class EchoServer extends AbstractServer {
 	protected void RecupereObjet(String chemin) throws IOException{
 	    Socket sock = new ServerSocket(getPort()).accept();
 	    
-	    transfert(
+	    /*transfert(
 	            sock.getInputStream(),
 	            new FileOutputStream(chemin),
-	            true);
+	            true);*/
 	    
 	    sock.close(); 
 	}
