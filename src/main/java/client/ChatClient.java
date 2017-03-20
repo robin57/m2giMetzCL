@@ -4,15 +4,12 @@
 
 package client;
 
-import java.io.IOException;
-
-
+import common.ChatIF;
 import crypto.Packet;
 import crypto.PacketFactory;
-
 import ocsf.client.ObservableClient;
 
-import common.ChatIF;
+import java.io.IOException;
 
 /**
  * This class overrides some of the methods defined in the abstract
@@ -152,9 +149,7 @@ public class ChatClient extends ObservableClient
 	protected void connectionClosed() {
 
 		//affichage sur l'interface client : info connexion terminee
-		clientUI.display
-		("Connexion terminee avec le serveur");
-
+		clientUI.display("Connexion terminee avec le serveur");
 	}
 
 	/**
@@ -171,7 +166,6 @@ public class ChatClient extends ObservableClient
 
 		//arret du client
 		quit();
-
 	}
 
 }

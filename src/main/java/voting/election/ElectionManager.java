@@ -1,13 +1,5 @@
 package voting.election;
 
-import com.google.common.collect.ImmutableSet;
-import info.gehrels.voting.*;
-import info.gehrels.voting.singleTransferableVote.STVElectionCalculation;
-import info.gehrels.voting.singleTransferableVote.STVElectionCalculationFactory;
-import info.gehrels.voting.singleTransferableVote.STVElectionCalculationListener;
-import info.gehrels.voting.singleTransferableVote.StringBuilderBackedSTVElectionCalculationListener;
-import org.apache.commons.math3.fraction.BigFraction;
-import voting.Bulletin;
 import voting.VoteChoice;
 import voting.VoteManager;
 

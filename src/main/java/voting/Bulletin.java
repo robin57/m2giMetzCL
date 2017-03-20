@@ -3,7 +3,6 @@ package voting;
 import com.google.common.collect.ImmutableSet;
 import info.gehrels.voting.Ballot;
 import info.gehrels.voting.Vote;
-import voting.VoteChoice;
 
 
 /**

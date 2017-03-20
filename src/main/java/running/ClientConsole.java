@@ -1,13 +1,15 @@
-// This file contains material supporting section 3.7 of the textbook:
+package running;// This file contains material supporting section 3.7 of the textbook:
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com 
 
-import java.io.*;
-
-import client.*;
-import common.*;
+import client.ChatClient;
+import common.ChatIF;
 import crypto.Packet;
 import crypto.PacketFactory;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * This class constructs the UI for a chat client.  It implements the
@@ -38,7 +40,7 @@ public class ClientConsole implements ChatIF {
     //Constructors ****************************************************
 
     /**
-     * Constructs an instance of the ClientConsole UI.
+     * Constructs an instance of the running.ClientConsole UI.
      *
      * @param host The host to connect to.
      * @param port The port to connect on.

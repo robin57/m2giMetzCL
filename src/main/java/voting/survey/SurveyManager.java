@@ -13,7 +13,7 @@ public class SurveyManager extends VoteManager {
     private final String subject;
 
     public SurveyManager(String subject, List<VoteChoice> choices, int nbChoices) {
-        super("vide", choices, nbChoices);
+        super("Sondage", choices, nbChoices);
 
         this.subject = subject;
     }
